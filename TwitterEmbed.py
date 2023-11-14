@@ -4,7 +4,7 @@ import discord
 from discord.ext import commands
 import re
 
-token = 'replace_with_your_token'
+token = 'your_bot_token'
 bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
 @bot.event

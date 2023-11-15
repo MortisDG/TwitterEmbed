@@ -22,7 +22,7 @@ async def on_message(message):
     x_match = re.search(r'https?://x\.com/(\S+)', message.content)
 
     if twitter_match:
-        modified_link = f'https://vx{twitter_match.group(1)}'
+        modified_link = f'https://vxtwitter.com/{twitter_match.group(1)}'
         remaining_text = re.sub(r'https?://twitter\.com/\S+', '', message.content)
         await message.channel.send(f'{modified_link}\nSent by **{message.author.display_name}**\nMessage:{remaining_text}')
         await message.delete()
